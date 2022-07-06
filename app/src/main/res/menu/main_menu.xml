@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_1"
+        android:title="Bienes"
+        android:icon="@drawable/ic_1"></item>
+
+    <item android:id="@+id/menu_2"
+        android:title="Mantenedor"
+        android:icon="@drawable/ic_2"></item>
+
+    <item android:id="@+id/menu_3"
+        android:title="Extra"
+        android:icon="@drawable/ic_3"></item>
+</menu>
