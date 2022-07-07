@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 if (item.getItemId() == R.id.menu_2){
-                    mostrarFragmento(new Fragmento1());
+                    Intent intent = new Intent(MainActivity.this, RegistrarActivity.class);
+                    startActivity(intent);
+                    //mostrarFragmento(new Fragmento1());
                     item.setChecked(true);
 
                 }

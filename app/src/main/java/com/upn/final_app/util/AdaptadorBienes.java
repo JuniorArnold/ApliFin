@@ -10,11 +10,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.upn.final_app.Fragmento1;
 import com.upn.final_app.R;
+import com.upn.final_app.RegistrarActivity;
 import com.upn.final_app.entidad.Bien;
 
 import java.util.ArrayList;
@@ -45,21 +47,17 @@ public class AdaptadorBienes extends RecyclerView.Adapter<AdaptadorBienes.MyView
         holder.estado.setText(listaBienes.get(position).getEstado()+"");
         holder.vida.setText(listaBienes.get(position).getVida()+"");
 
-        holder.linearLayout.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.linearLayout.setOnLongClickListener(v -> {
+            Intent intent = new Intent(context, RegistrarActivity.class);
+            intent.putExtra("id", listaBienes.get(position).getId()+"");
+            intent.putExtra("nombre", listaBienes.get(position).getNombre()+"");
+            intent.putExtra("codigo", listaBienes.get(position).getCodPat()+"");
+            intent.putExtra("estado", listaBienes.get(position).getEstado()+"");
+            intent.putExtra("vida", listaBienes.get(position).getVida()+"");
 
-            @Override
-            public boolean onLongClick(View v) {
-                Intent intent = new Intent(context, Fragmento1.class);
-                intent.putExtra("id", listaBienes.get(position).getId()+"");
-                intent.putExtra("nombre", listaBienes.get(position).getNombre()+"");
-                intent.putExtra("codigo", listaBienes.get(position).getCodPat()+"");
-                intent.putExtra("estado", listaBienes.get(position).getEstado()+"");
-                intent.putExtra("vida", listaBienes.get(position).getVida()+"");
-
-                intent.putExtra("btnTitutlo", "Actualizar Bien");
-                context.startActivity(intent);
-                return false;
-            }
+            intent.putExtra("btnTitutlo", "Actualizar Bien");
+            context.startActivity(intent);
+            return false;
         });
     }
 
@@ -71,6 +69,7 @@ public class AdaptadorBienes extends RecyclerView.Adapter<AdaptadorBienes.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextInputEditText nombre, codigo, estado, vida;
         LinearLayout linearLayout;
+        CardView fila_card;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -80,6 +79,7 @@ public class AdaptadorBienes extends RecyclerView.Adapter<AdaptadorBienes.MyView
             vida = itemView.findViewById(R.id.fila_vida);
 
             linearLayout = itemView.findViewById(R.id.fila_layout);
+            fila_card = itemView.findViewById(R.id.fila_card);
         }
     }
 }

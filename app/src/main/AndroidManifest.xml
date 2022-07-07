@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Final_App"
         tools:targetApi="31">
         <activity
+            android:name=".RegistrarActivity"
+            android:exported="false" />
+        <activity
             android:name=".MapaActivity"
             android:exported="false" />
         <activity
