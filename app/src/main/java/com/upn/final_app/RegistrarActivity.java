@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +26,7 @@ public class RegistrarActivity extends AppCompatActivity {
     Bien bien;
     HashMap map = new HashMap();
 
+    TextView textView;
     EditText txtNombre, txtCodigo, txtVida, txtEstado;
     Button btnRegistrar;
     String id;
@@ -37,6 +39,7 @@ public class RegistrarActivity extends AppCompatActivity {
 
         inicializarFirebase(this);
 
+        textView = findViewById(R.id.textView);
         btnRegistrar = findViewById(R.id.btnRegistrar);
         txtNombre = findViewById(R.id.txtNombre);
         txtCodigo = findViewById(R.id.txtCodigo);
@@ -71,6 +74,7 @@ public class RegistrarActivity extends AppCompatActivity {
 
         String titulo = getIntent().getStringExtra("btnTitutlo");
 
+        textView.setText(titulo);
         txtNombre.setText(nombre);
         txtCodigo.setText(codigo);
         txtVida.setText(vida);
