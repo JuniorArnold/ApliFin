@@ -92,8 +92,6 @@ public class Fragmento2 extends Fragment {
                     }
                 });
                 ventana.create().show();
-
-
             }
         }).attachToRecyclerView(rv);
 
