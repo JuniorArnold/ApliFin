@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         txtEstado = findViewById(R.id.txtEstado);
         btnRegistrar = findViewById(R.id.btnRegistrar);
 
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                capturarDatos();
+            }
+        });
+
        bNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

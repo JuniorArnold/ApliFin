@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "599466108351",
+    "project_id": "appbien-b684a",
+    "storage_bucket": "appbien-b684a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599466108351:android:cd9bebc4c03d0e15b12d0a",
+        "android_client_info": {
+          "package_name": "com.upn.final_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599466108351-9ikk81qe5o2eutv2i9ivqnvirig4jljg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBayny7LRzQ3jDZRfTi3zttWt6-kedL0o8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599466108351-9ikk81qe5o2eutv2i9ivqnvirig4jljg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
