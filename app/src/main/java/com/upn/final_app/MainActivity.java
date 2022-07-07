@@ -23,14 +23,12 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bNavigation;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         asignarReferencias();
     }
-
 
     private void asignarReferencias(){
         bNavigation = findViewById(R.id.bNavigation);
