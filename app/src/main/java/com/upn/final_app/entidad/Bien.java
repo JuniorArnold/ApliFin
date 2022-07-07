@@ -1,9 +1,17 @@
 package com.upn.final_app.entidad;
 
 public class Bien {
-    private int id;
+    private String id;
     private String nombre, codPat, estado;
     private int vida;
+
+    public Bien(String id, String nombre, String codPat, String estado, int vida) {
+        this.id = id;
+        this.nombre = nombre;
+        this.codPat = codPat;
+        this.estado = estado;
+        this.vida = vida;
+    }
 
     public Bien(String nombre, String codPat, String estado, int vida) {
         this.nombre = nombre;
@@ -12,19 +20,11 @@ public class Bien {
         this.vida = vida;
     }
 
-    public Bien(int id, String nombre, String codPat, String estado, int vida) {
-        this.id = id;
-        this.nombre = nombre;
-        this.codPat = codPat;
-        this.estado = estado;
-        this.vida = vida;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
