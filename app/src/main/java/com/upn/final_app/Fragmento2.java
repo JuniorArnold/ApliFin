@@ -1,6 +1,9 @@
 package com.upn.final_app;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -73,9 +76,24 @@ public class Fragmento2 extends Fragment {
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int pos = viewHolder.getAdapterPosition();
                 String id = listaBienes.get(pos).getId();
-                listaBienes.remove(pos);
-                reference.child("Bienes").child(id).removeValue();
-                adaptadorBienes.notifyDataSetChanged();
+
+                AlertDialog.Builder ventana = new AlertDialog.Builder(view.getContext());
+                ventana.setTitle("Alerta");
+                ventana.setMessage("Deseas eliminar el Bien?");
+                ventana.setPositiveButton("Aceptar", (dialog, which) -> {
+                    listaBienes.remove(pos);
+                    reference.child("Bienes").child(id).removeValue();
+                    adaptadorBienes.notifyDataSetChanged();
+                });
+                ventana.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(view.getContext(), MainActivity.class));
+                    }
+                });
+                ventana.create().show();
+
+
             }
         }).attachToRecyclerView(rv);
 
