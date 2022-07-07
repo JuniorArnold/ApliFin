@@ -20,6 +20,10 @@ public class Bien {
         this.vida = vida;
     }
 
+    public Bien(){
+
+    }
+
     public String getId() {
         return id;
     }

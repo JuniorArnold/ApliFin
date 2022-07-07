@@ -5,13 +5,4 @@
     android:layout_height="match_parent"
     tools:context=".Fragmento3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/menu_3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#E91E63"
-        android:gravity="center"
-        android:text="Pantalla 3" />
-
 </FrameLayout>
